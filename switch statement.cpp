@@ -18,6 +18,8 @@ using namespace std;
 // case, every case below this case would come into flow, until another break.
 // So, as you can see there seems to be no use of continue here.//
 
+
+//******************Calculator code***********************
 int a, b;
 char c;
 int result;
