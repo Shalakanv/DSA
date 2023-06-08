@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// Patterns important question
 // ***************1st pattern***********
 // int main()
 // {
