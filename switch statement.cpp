@@ -57,3 +57,33 @@ int main() {
 //     cout<<"Exit"<<endl;
 //   }
 // }
+
+// int main() {
+//   int amount = 1330;
+//   int store=0;
+  // int num;
+  // int result, choice;
+  // cout <<"Enter num with which you want to delete amount:";
+  // cin>>num;
+//   cout << "Enter your choice:";
+//   cin >> choice;
+//   switch (choice) {
+//   case 1:
+//     result = amount / 100;
+//     store = amount - result;
+//     cout<<"100 rupees notes="<<result;
+//     break;
+
+//   case 2:
+//     result = store / 20;
+//     store = amount - result;
+//     cout<<"20 rupees notes="<<result;
+//     break;
+
+//   case 3:
+//     result = store / 1;
+//     store = amount - result;
+//     cout<<"1 rupees notes="<<result;
+//     break;
+//   }
+// }
