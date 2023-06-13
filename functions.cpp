@@ -55,30 +55,59 @@ using namespace std;
 // }
 
 
-int factorial(int n)   // function signature
-{
-  // function body
-  int ans=1;
-  for(int i=1;i<=n;i++)
-    {
-      ans=ans*i;
-    }
-  return ans;
-}
+// int factorial(int n)   // function signature
+// {
+//   // function body
+//   int ans=1;
+//   for(int i=1;i<=n;i++)
+//     {
+//       ans=ans*i;
+//     }
+//   return ans;
+// }
 
-int nCr(int n,int r)
+// int nCr(int n,int r)
+// {
+//   int result;
+//   result=(factorial(n))/(factorial(r)*factorial(n-r));
+//   return result;
+// }
+
+// int main()
+// {
+//   int n,r;
+//   cout<<"enter value for n:";
+//   cin>>n;
+//   cout<<"enter value for r:";
+//   cin>>r;
+//   cout<<"Result is:"<<nCr(n,r); 
+// }
+
+
+bool isprime(int n)
 {
-  int result;
-  result=(factorial(n))/(factorial(r)*factorial(n-r));
-  return result;
+  for(int i=2;i<n-1;i++)
+    {
+      if(n%i==0)
+      {
+        return 0;
+      }
+    }
+  return 1;
 }
 
 int main()
 {
-  int n,r;
-  cout<<"enter value for n:";
+  int n;
+  cout<<"Enter value for n:";
   cin>>n;
-  cout<<"enter value for r:";
-  cin>>r;
-  cout<<"Result is:"<<nCr(n,r); 
+
+  if(isprime(n))
+  {
+    cout<<"Prime number";
+  }
+  else
+  {
+    cout<<"Not a prime number";
+  }
 }
