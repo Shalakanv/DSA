@@ -60,16 +60,16 @@ using namespace std;
 // {
 //   // function body
 //   int ans=1;
-//   for(int i=1;i<=n;i++)
-//     {
-//       ans=ans*i;
-//     }
-//   return ans;
+//   for(int i=1;i<=n;i++)         // n=5  for first iteration i=1,ans=1*1=1
+//     {                           // i=2  for 2nd iteration ans=1*2=2
+//       ans=ans*i;                // i=3  for 3rd iteration ans=2*3=6
+//     }                           // i=4  for 4th iteration ans=6*4=24
+//   return ans;                   // i=5  for 5th iteration ans=24*5=120
 // }
 
 // int nCr(int n,int r)
 // {
-//   int result;
+//   int result;                                                 
 //   result=(factorial(n))/(factorial(r)*factorial(n-r));
 //   return result;
 // }
