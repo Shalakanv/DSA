@@ -4,13 +4,22 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-  int i;
-  int array1[5]={1,2,3,4,5};
-  for(i=0;i<5;i++)
-    {
-      int result=array1[i];
-      cout<<"Value is "<<result<<endl;
-    }
-  i++;
+// int main() {
+//   int i;
+//   int array1[5]={1,2,3,4,5};
+//   for(i=0;i<5;i++)
+//     {
+//       int result=array1[i];
+//       cout<<"Value is "<<result<<endl;
+//     }
+//   i++;
+// }
+
+//To find length of array
+
+int main()
+{
+  int arr[5]={11,12,13,14,15};
+  int length=sizeof(arr)/sizeof(arr[0]);
+  cout<<"Length of array is "<<length;
 }
