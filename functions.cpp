@@ -87,14 +87,14 @@ using namespace std;
 //********************isprime function******************
 // bool isprime(int n)
 // {
-//   for(int i=2;i<n-1;i++)
+//   for(int i=2;i<n-1;i++)     check prime number from 2 to n-1
 //     {
-//       if(n%i==0)
+//       if(n%i==0)            if remainder is 0 then number is not prime
 //       {
 //         return 0;
 //       }
 //     }
-//   return 1;
+//   return 1;                else number is prime
 // }
 
 // int main()
