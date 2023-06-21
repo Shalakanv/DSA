@@ -4,32 +4,35 @@
 // To use INT_MAX and INT_MIN micros it is advisable to include <climits> or <limits.h> header file
 using namespace std;
 
+// Searching maximum and minimum number in array with the help of predefined function max and min
 int getMin(int num[],int n)
 {
   int i;
-  int min= INT_MAX;
+  int minimum= INT_MAX;
   for(i=0;i<n;i++)
     {
-      if(num[i]<min)
-      {
-        min=num[i];
-      }
+      minimum=min(minimum,num[i]);
+      // if(num[i]<min)
+      // {
+      //   min=num[i];
+      // }
     }
-  return min;
+  return minimum;
 }
 
 int getMax(int num[],int n)
 {
   int i;
-  int max= INT_MIN;
+  int maximum= INT_MIN;
   for(i=0;i<n;i++)
     {
-      if(num[i]>max)
-      {
-        max=num[i];
-      }
+      maximum=max(maximum,num[i]);
+      // if(num[i]>max)
+      // {
+      //   max=num[i];
+      // }
     }
-  return max;
+  return maximum;
 }
 
 int main()
@@ -45,6 +48,9 @@ int main()
       cin>>num[i];
     }
 
-  cout<<"Maximum number is: "<<getMax(num,size)<<endl;
+  cout<<"Maximum number is: "<<getMax(num,size)<<endl; //num means we are not passing whole array to the function we are just passing address of first index to the function which get stored in num[]
   cout<<"Minimum number is: "<<getMin(num,size);
 }
+
+
+
