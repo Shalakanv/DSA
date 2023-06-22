@@ -5,7 +5,7 @@
 using namespace std;
 
 // Searching maximum and minimum number in array with the help of predefined function max and min
-int getMin(int num[],int n)
+int getMin(int num[],int n)    //calculate minimum element from array
 {
   int i;
   int minimum= INT_MAX;
@@ -20,7 +20,7 @@ int getMin(int num[],int n)
   return minimum;
 }
 
-int getMax(int num[],int n)
+int getMax(int num[],int n)  // calculate maximum element from array
 {
   int i;
   int maximum= INT_MIN;
