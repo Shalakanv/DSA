@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// update function 
 void update(int arra[],int n)
 {
    arra[0]=50;
