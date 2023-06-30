@@ -16,7 +16,10 @@ void swap_alternate(int arr[],int size)
     {
       if(i+1 < size)
       {
-        swap(arr[i],arr[i+1]);   // copy (i+1)th element in (i)th location
+        //swap(arr[i],arr[i+1]);   // copy (i+1)th element in (i)th location
+        int temp=arr[i+1];
+        arr[i+1]=arr[i];
+        arr[i]=temp;
       }
     }
 }
