@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 using namespace std;
 
 // Node creation
@@ -114,6 +115,29 @@ void print(Node* head)
     cout<< endl;
 }
 
+bool detectLoop(Node* head)
+{
+    if(head == NULL)
+    {
+        return false;
+    }
+
+    map < Node*,bool >visited;
+    Node* temp = head;
+
+    while(temp != NULL)
+    {
+        // cycle is present
+        if(visited[temp] == true){
+            return true;
+        }
+        visited[temp]=true;
+        temp = temp -> next;
+    }
+
+    return false;
+}
+
 int main()
 {
     // node created
@@ -144,5 +168,13 @@ int main()
 
     deleteNode(1,head);
     print(head);
+
+    if(detectLoop(head))
+    {
+        cout<<"Loop is present"<<endl;
+    }
+    else{
+        cout<<"Loop is not present"<<endl;
+    }
 
 }
