@@ -115,6 +115,7 @@ void print(Node* head)
     cout<< endl;
 }
 
+//Approach 1
 bool detectLoop(Node* head)
 {
     if(head == NULL)
@@ -129,6 +130,7 @@ bool detectLoop(Node* head)
     {
         // cycle is present
         if(visited[temp] == true){
+            cout<<"Loop is present on element "<<temp -> data <<endl;
             return true;
         }
         visited[temp]=true;
@@ -136,6 +138,36 @@ bool detectLoop(Node* head)
     }
 
     return false;
+}
+
+// Floyd's cycle detection algorithm
+Node* floydDetectionAlgo(Node* head)
+{
+    if(head == NULL)
+    {
+        return NULL;
+    }
+
+    Node* slow = head;
+    Node* fast = head;
+
+    while(slow != NULL && fast != NULL)
+    {
+        fast = fast -> next;
+        if(fast != NULL)
+        {
+            fast  = fast -> next;
+        }
+
+        slow = slow -> next;
+
+        if(slow == fast)
+        {
+            cout<<"Loop is present at "<<slow->data<<endl;
+           return slow;
+        }
+    }
+    return fast;
 }
 
 int main()
@@ -169,12 +201,18 @@ int main()
     deleteNode(1,head);
     print(head);
 
-    if(detectLoop(head))
+    tail -> next = head -> next;
+
+
+
+    
+    if(floydDetectionAlgo(head)!= NULL)
     {
         cout<<"Loop is present"<<endl;
     }
     else{
         cout<<"Loop is not present"<<endl;
     }
+    
 
 }
