@@ -188,6 +188,25 @@ Node* getStartingNode(Node* head)
     return slow;
 }
 
+Node* removeLoop(Node* head)
+{
+    if(head == NULL)
+    {
+        return NULL;
+    }
+
+    Node* startOfLoop = getStartingNode(head);
+    Node* temp = startOfLoop;
+
+    while(temp -> next != startOfLoop)
+    {
+        temp = temp -> next;
+    }
+
+    temp -> next = NULL;
+    return head;
+}
+
 int main()
 {
     // node created
@@ -221,9 +240,6 @@ int main()
 
     tail -> next = head -> next;
 
-
-
-    
     if(floydDetectionAlgo(head)!= NULL)
     {
         cout<<"Loop is present"<<endl;
@@ -235,6 +251,9 @@ int main()
     Node* loop = getStartingNode(head);
 
     cout<<"Loop starts at "<<loop -> data <<endl;
+
+    removeLoop(head);
+    print(head);
     
 
 }
